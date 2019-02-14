@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="textimagemaker.hooyee.com.textimagemaker">
+<manifest package="textimagemaker.hooyee.com.textimagemaker"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -13,37 +13,42 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".main.TActivity">
+        </activity>
+        <activity android:name=".main.FirstActivity">
+        </activity>
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="59d85de44ad1560d4d000019" />
+            android:value="59d85de44ad1560d4d000019"/>
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="google play" />
+            android:value="google play"/>
 
         <provider
-            android:authorities="textimagemaker.hooyee.com.textimagemaker.fileprovider"
             android:name="android.support.v4.content.FileProvider"
-            android:grantUriPermissions="true"
-            android:exported="false">
+            android:authorities="textimagemaker.hooyee.com.textimagemaker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths"/>
         </provider>
 
-        <activity android:name=".main.MainActivity" android:launchMode="singleTask">
+        <activity
+            android:name=".main.MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".preview.PreviewActivity"
-            android:theme="@style/fullscreen" />
-        <activity android:name=".BaseActivity"></activity>
-
-        <activity android:name=".config.ColorPickerActivity" />
+            android:theme="@style/fullscreen"/>
+        <activity android:name=".BaseActivity"/>
+        <activity android:name=".config.ColorPickerActivity"/>
     </application>
 
 </manifest>
