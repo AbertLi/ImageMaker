@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="textimagemaker.hooyee.com.textimagemaker.main.MainActivity">
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/border_radius"
+        android:drawableTint="@color/colorAccent"
+        android:gravity="left"
+        android:hint="@string/input"
+        android:minLines="5"
+        android:padding="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_align_policy"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/align_center" />
+
+        <Button
+            android:id="@+id/bt_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/background_bt"
+            android:hint="@string/tip"
+            android:text="@string/preview" />
+
+        <Button
+            android:id="@+id/bt_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@id/bt_preview"
+            android:background="@drawable/background_bt"
+            android:text="@string/clear" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tx_tip"
+            android:gravity="center"
+            android:alpha="0"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bubble"
+            android:text="@string/click_me" />
+    </RelativeLayout>
+
+</LinearLayout>
