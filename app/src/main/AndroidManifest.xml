@@ -13,9 +13,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.TActivity">
+        <activity android:name=".main.ShhActivity">
         </activity>
-        <activity android:name=".main.FirstActivity">
+        <activity android:name=".main.Text2ImgActivity">
         </activity>
 
         <meta-data

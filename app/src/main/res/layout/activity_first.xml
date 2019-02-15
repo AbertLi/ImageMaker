@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".main.FirstActivity"
+    tools:context=".main.MainActivity"
     >
 
     <LinearLayout

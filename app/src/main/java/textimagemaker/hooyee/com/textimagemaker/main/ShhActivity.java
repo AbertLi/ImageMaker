@@ -8,7 +8,7 @@ import textimagemaker.hooyee.com.textimagemaker.R;
 /**
  * 手画
  */
-public class TActivity extends FragmentActivity {
+public class ShhActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

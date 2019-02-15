@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="textimagemaker.hooyee.com.textimagemaker.main.MainActivity">
+    tools:context="textimagemaker.hooyee.com.textimagemaker.main.Text2ImgActivity">
 
     <EditText
         android:id="@+id/et_content"
