@@ -9,6 +9,9 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
+import textimagemaker.hooyee.com.textimagemaker.util.Logs;
+
 /**
  * Created by Jay on 2015/10/15 0015.
  * 绘制画
@@ -25,26 +28,29 @@ public class MyView extends View {
 
     public MyView(Context context) {
         super(context);
+        Logs.eprintln("MyView","1");
         init();
     }
 
     public MyView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        Logs.eprintln("MyView","2");
         init();
     }
 
     public MyView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        Logs.eprintln("MyView","3");
         init();
     }
 
     private void init(){
         mPath = new Path();
         mPaint = new Paint();   //初始化画笔
-        mPaint.setColor(Color.GREEN);
-        mPaint.setAntiAlias(true);
-        mPaint.setDither(true);
-        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setColor(Color.GREEN);//画笔颜色
+        mPaint.setAntiAlias(true);//抗锯齿
+        mPaint.setDither(true);//设定是否使用图像抖动处理，会使绘制出来的图片颜色更加平滑和饱满，图像更加清晰
+        mPaint.setStyle(Paint.Style.STROKE);//设置画笔的样式，为FILL，FILL_OR_STROKE，或STROKE
         mPaint.setStrokeJoin(Paint.Join.ROUND); //结合处为圆角
         mPaint.setStrokeCap(Paint.Cap.ROUND); // 设置转弯处为圆角
         mPaint.setStrokeWidth(20);   // 设置画笔宽度
@@ -52,6 +58,7 @@ public class MyView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        Logs.eprintln("MyView","onMeasure   widthMeasureSpec="+widthMeasureSpec+"   heightMeasureSpec="+heightMeasureSpec);
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int width = getMeasuredWidth();
         int height = getMeasuredHeight();
@@ -63,6 +70,7 @@ public class MyView extends View {
     //重写该方法，在这里绘图
     @Override
     protected void onDraw(Canvas canvas) {
+        Logs.eprintln("MyView","onDraw   canvas="+canvas);
         drawPath();
         canvas.drawBitmap(mBitmap, 0, 0, null);
     }
@@ -74,7 +82,7 @@ public class MyView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-
+        Logs.eprintln("MyView","onTouchEvent   event="+event.toString());
         int action = event.getAction();
         int x = (int) event.getX();
         int y = (int) event.getY();
@@ -84,7 +92,8 @@ public class MyView extends View {
             case MotionEvent.ACTION_DOWN:
                 mLastX = x;
                 mLastY = y;
-                mPath.moveTo(mLastX, mLastY);
+                mPath.moveTo(mLastX, mLastY);//当手指点击到屏幕的时候就开始绘制。
+                mPath.lineTo(x, y);
                 break;
             case MotionEvent.ACTION_MOVE:
                 int dx = Math.abs(x - mLastX);

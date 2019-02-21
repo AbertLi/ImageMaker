@@ -1,0 +1,9 @@
+
+
+
+
+功能实现顺序：
+1，binding，viewModle，liveData，Room，Retrofit，RxJava
+2，绘图  三大绘图工具 他们分别是Canvas(画布)，Paint(画笔)，Path(路径) ---   单独一个项目
+3，Kotlin
+先了解用法，后深入。

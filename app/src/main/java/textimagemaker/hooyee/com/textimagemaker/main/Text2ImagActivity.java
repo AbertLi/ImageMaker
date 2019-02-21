@@ -24,7 +24,7 @@ import textimagemaker.hooyee.com.textimagemaker.util.AnimatorUtil;
 import textimagemaker.hooyee.com.textimagemaker.util.FlagModel;
 import textimagemaker.hooyee.com.textimagemaker.util.Util;
 
-public class Text2ImgActivity extends AppCompatActivity implements MainContract.View {
+public class Text2ImagActivity extends AppCompatActivity implements MainContract.View {
     private MainPresenter mPresenter;
     private EditText mEdit;
     private ImageView mPreviewIv;

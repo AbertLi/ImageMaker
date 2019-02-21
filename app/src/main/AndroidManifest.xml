@@ -13,17 +13,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.ShhActivity">
+        <activity android:name=".main.Shh2ImageActivity">
         </activity>
-        <activity android:name=".main.Text2ImgActivity">
+        <activity android:name=".main.Text2ImagActivity">
         </activity>
+
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="59d85de44ad1560d4d000019"/>
+            android:value="5c6ec401f1f556b8aa000a2e"/>
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="google play"/>
+            android:value="Github"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

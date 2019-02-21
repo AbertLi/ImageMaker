@@ -18,11 +18,11 @@ public class MainActivity extends FragmentActivity {
     public  void btn(View view){
         switch (view.getId()){
             case R.id.text2image:
-                Intent intent=new Intent(this, Text2ImgActivity.class);
+                Intent intent=new Intent(this, Text2ImagActivity.class);
                 startActivity(intent);
                 break;
             case R.id.hh2image:
-                Intent intent2=new Intent(this, ShhActivity.class);
+                Intent intent2=new Intent(this, Shh2ImageActivity.class);
                 startActivity(intent2);
                 break;
         }
